@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <div>
-      <input v-model="name" />
-      <button class="shadow-xl" @click="fetchAxios">Get input field value</button>
-      <br />
-      <div v-for="result in results" :key="result.current">
-        {{ result.temp_c }}
+    <input class="shadow-xl" v-model="name" />
+    <button class="shadow-xl" @click="fetchAxios">Get input field value</button>
+
+    <div class="box-border  block shadow-xl" id="card">
+      <div id="test">
+
+          <div v-for="result in results" :key="result.current">
+            <p class="text-7xl">{{ result.temp_c }}</p>
+          </div>
+          <div v-for="cons in results.current" :key="cons.condition">
+            <p class="text-7xl">{{ cons.text }}</p>
+          </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -37,7 +44,17 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  justify-content: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#card{
+  margin: 100px
+
+}
+#test{
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
