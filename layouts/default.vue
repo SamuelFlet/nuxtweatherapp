@@ -14,11 +14,11 @@ export default {
     return{
       meta:[
         {
-          httpequiv:"X-UA-Compatible",
+          "http-equiv":"X-UA-Compatible",
           content:"IE=edge"
         },
         {
-          httpequiv:"Content-Security-Policy",
+          "http-equiv":"Content-Security-Policy",
           content:"upgrade-insecure-requests"
         },
       ]
