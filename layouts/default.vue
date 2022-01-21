@@ -1,5 +1,7 @@
 <template>
+
   <main id="app">
+
     <img style="margin-left: auto; margin-right: auto;" src="~assets/New_Logo-preview.png"/>
     <Nuxt/>
   </main>
@@ -7,7 +9,21 @@
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  head(){
+    return{
+      meta:[
+        {
+          httpequiv:"X-UA-Compatible",
+          content:"IE=edge"
+        },
+        {
+          httpequiv:"Content-Security-Policy",
+          content:"upgrade-insecure-requests"
+        },
+      ]
+    }
+  }
 }
 </script>
 
