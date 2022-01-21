@@ -3,14 +3,13 @@
     <input class="shadow-xl" v-model="name" />
     <button class="shadow-xl" @click="fetchAxios">Get input field value</button>
 
-    <div class="box-border  block shadow-xl" id="card">
+    <div class="box-border flex justify-center shadow-xl" id="card">
       <div id="test">
-
           <div v-for="result in results" :key="result.current">
-            <p class="text-7xl">{{ result.temp_c }}</p>
+            <p class="text-7xl">{{result.temp_c}}</p>
           </div>
           <div v-for="cons in results.current" :key="cons.condition">
-            <p class="text-7xl">{{ cons.text }}</p>
+            <img class="object-center" :src="cons.icon">
           </div>
       </div>
     </div>
@@ -50,11 +49,8 @@ export default {
 }
 
 #card{
-  margin: 100px
-
-}
-#test{
-  margin-left: auto;
-  margin-right: auto;
+  margin-top:50px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 </style>
