@@ -1,25 +1,20 @@
+<script src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
 <template>
   <div id="app">
     <input class="shadow-xl" v-model="name" />
     <button class="shadow-xl" @click="fetchAxios">Get input field value</button>
 
     <div class="box-border flex justify-center shadow-xl" id="card">
-      <div id="test">
-          <div v-for="result in results" :key="result.current">
-            <p class="text-7xl">{{result.temp_c}}</p>
-          </div>
-          <div v-for="cons in results.current" :key="cons.condition">
-            <img class="object-center" :src="cons.icon">
-          </div>
-      </div>
+      <p v-if="results.current" class="text-7xl">{{results.current.temp_c}}°C</p>
+      <img v-for="cons in results.current" :key="cons.condition" class="object-center" :src="cons.icon">
     </div>
 
   </div>
 </template>
 
+
 <script>
 import axios from "axios";
-
 export default {
   name: 'IndexPage',
   data() {
@@ -30,7 +25,7 @@ export default {
   },
   methods: {
     fetchAxios() {
-      axios.get("http://api.weatherapi.com/v1/current.json?Key=6cc51e6401484112b72142155221701&q=" + this.name)
+      axios.post("http://api.weatherapi.com/v1/current.json?Key=6cc51e6401484112b72142155221701&q=" + this.name)
         .then((response) => {this.results = response.data;});
     },
   },
