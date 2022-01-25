@@ -4,15 +4,18 @@
     <button class="shadow-xl" @click="fetchAxios">Get input field value</button>
 
     <div class="box-border flex justify-center shadow-xl" id="card">
-      <p v-if="results.current" class="text-7xl">
-        {{ results.current.temp_c }}°C
-      </p>
-      <img
-        v-for="cons in results.current"
-        :key="cons.condition"
-        class="object-center"
-        :src="cons.icon"
-      />
+      <div class="block">
+        <p v-if="results.location" class="text-7xl underline tracking-wide" style="margin:10px">{{ results.location.name }}</p>
+        <div class="flex justify-center">
+          <p v-if="results.current" class="text-7xl">
+            {{ results.current.temp_c }}°C
+          </p>
+          <p v-if="results.current" class="text-1xl" style="display: grid; align-content: end;">
+            &emsp;Feels Like:  {{ results.current.feelslike_c }}°C
+          </p>
+        </div>
+        <img v-if="results.current" :src="results.current.condition.icon" />
+      </div>
     </div>
   </div>
 </template>
@@ -58,4 +61,11 @@ export default {
   margin-left: 30%;
   margin-right: 30%;
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 </style>
