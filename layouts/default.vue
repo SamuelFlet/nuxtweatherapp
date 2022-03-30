@@ -3,13 +3,14 @@
     <div>
       <b-navbar type="dark" variant="dark">
         <b-navbar-nav>
-          <b-nav-item><NuxtLink to="/">Home</NuxtLink></b-nav-item>
-          <b-nav-item text="Lang"><NuxtLink to="/7day">Home</NuxtLink></b-nav-item>
-          <b-nav-item text="User" right>14-Day</b-nav-item>
+          <b-nav-item><NuxtLink to="/">Current Forecast</NuxtLink></b-nav-item>
+          <b-nav-item text="Lang"><NuxtLink to="/3day">3 Day Forecast</NuxtLink></b-nav-item>
         </b-navbar-nav>
       </b-navbar>
     </div>
     <Nuxt />
+    <br><br><br><br>
+    <h1>I will explain this later</h1>
   </div>
 </template>
 
@@ -48,5 +49,8 @@ export default {
   justify-content: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h1{
+  text-align: center;
 }
 </style>
