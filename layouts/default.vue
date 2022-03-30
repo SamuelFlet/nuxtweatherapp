@@ -2,9 +2,10 @@
   <div>
     <div>
       <b-navbar type="dark" variant="dark">
+        <b-navbar-brand href="/">Sam's Weather App</b-navbar-brand>
         <b-navbar-nav>
-          <b-nav-item><NuxtLink to="/">Current Forecast</NuxtLink></b-nav-item>
-          <b-nav-item text="Lang"><NuxtLink to="/3day">3 Day Forecast</NuxtLink></b-nav-item>
+          <b-nav-item href="/">Current Forecast</b-nav-item>
+          <b-nav-item href="/3day">3 Day Forecast</b-nav-item>
         </b-navbar-nav>
       </b-navbar>
     </div>
