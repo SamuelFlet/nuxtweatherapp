@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <input class="shadow-xl" v-model="name" />
-    <button class="shadow-xl" @click="fetchAxios">Get input field value</button>
+    <div id="form">
+      <b-form-input
+        id="text"
+        v-model="name"
+        placeholder="Enter a location"
+      ></b-form-input>
+      <br>
+      <b-button style="margin: 10px" variant="primary" @click="fetchAxios">Submit</b-button>
+    </div>
     <div>
       <b-card v-if="results.location" :title="results.location.name" id="card">
         <b-card-text v-if="results.current">
@@ -70,6 +77,20 @@ export default {
   justify-content: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.form-control {
+  display: inline;
+}
+
+#form {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#text {
+  max-width: 20%;
 }
 
 #temp {

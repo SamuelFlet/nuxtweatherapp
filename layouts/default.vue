@@ -10,8 +10,22 @@
       </b-navbar>
     </div>
     <Nuxt />
-    <br><br><br><br>
-    <h1>I will explain this later</h1>
+    <br /><br /><br /><br />
+    <div class="jumbo">
+      <b-jumbotron style="width: 50% " bg-variant="info" text-variant="white" border-variant="dark">
+        <template #header>Sam's Weather App</template>
+
+        <template #lead>
+          This is a simple web app, where users can enter a location and receive the current weather or 3day forecast for it. 
+        </template>
+
+        <hr class="my-4" />
+
+        <p>
+          All data is gathered from weatherapi.com
+        </p>
+      </b-jumbotron>
+    </div>
   </div>
 </template>
 
@@ -51,7 +65,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-h1{
+h1 {
   text-align: center;
+}
+.jumbo{
+  display:flex;
+  justify-content: center;
 }
 </style>

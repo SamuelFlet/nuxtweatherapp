@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <input class="shadow-xl" v-model="name" />
-    <button class="shadow-xl" @click="fetchAxios">Get input field value</button>
+    <div id="form">
+      <b-form-input
+        id="text"
+        v-model="name"
+        placeholder="Enter a location"
+      ></b-form-input>
+      <br>
+      <b-button style="margin: 10px" variant="primary" @click="fetchAxios">Submit</b-button>
+    </div>
     <div>
       <h1 v-if="results.location">{{results.location.name}}</h1>
       <div class="d-flex" v-if="results.location" id="card2">
@@ -90,13 +97,24 @@ h1{
 }
 #card2{
   justify-content: center;
-  margin-right:10%
 }
 #temp {
   padding-top: 5%;
   font-size: 4rem;
 }
+.form-control {
+  display: inline;
+}
 
+#form {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#text {
+  max-width: 20%;
+}
 
 
 </style>
