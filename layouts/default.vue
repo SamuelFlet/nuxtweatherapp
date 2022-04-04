@@ -1,16 +1,17 @@
 <template>
-  <div>
+  <div id="realapp">
     <div>
-      <b-navbar type="dark" variant="dark">
+      <b-navbar style="color: white !important;">
         <b-navbar-brand href="/">Sam's Weather App</b-navbar-brand>
-        <b-navbar-nav>
+        <b-navbar-nav style="color: white !important;">
           <b-nav-item href="/">Current Forecast</b-nav-item>
           <b-nav-item href="/3day">3 Day Forecast</b-nav-item>
         </b-navbar-nav>
       </b-navbar>
     </div>
     <Nuxt />
-    <br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <footer>
     <div class="jumbo">
       <b-jumbotron style="width: 50% " bg-variant="info" text-variant="white" border-variant="dark">
         <template #header>Sam's Weather App</template>
@@ -26,6 +27,7 @@
         </p>
       </b-jumbotron>
     </div>
+    </footer>
   </div>
 </template>
 
@@ -55,6 +57,32 @@ export default {
 </script>
 
 <style scoped>
+#realapp{
+  background-image: url('assets\725626.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.navbar{
+  width: 60%;
+  
+}
+
+nav{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+a{
+  color: white !important;
+  font-size: 1.7em;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
