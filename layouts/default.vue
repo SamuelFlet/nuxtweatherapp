@@ -10,7 +10,7 @@
       </b-navbar>
     </div>
     <Nuxt />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <footer>
     <div class="jumbo">
       <b-jumbotron style="width: 50% " bg-variant="info" text-variant="white" border-variant="dark">
