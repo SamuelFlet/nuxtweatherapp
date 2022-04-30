@@ -1,32 +1,36 @@
 <template>
-  <div id="realapp">
+  <div>
     <div>
-      <b-navbar style="color: white !important;">
+      <b-navbar>
         <b-navbar-brand href="/">Sam's Weather App</b-navbar-brand>
-        <b-navbar-nav style="color: white !important;">
+        <b-navbar-nav>
           <b-nav-item href="/">Current Forecast</b-nav-item>
           <b-nav-item href="/3day">3 Day Forecast</b-nav-item>
         </b-navbar-nav>
       </b-navbar>
     </div>
     <Nuxt />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br>
     <footer>
-    <div class="jumbo">
-      <b-jumbotron style="width: 50% " bg-variant="info" text-variant="white" border-variant="dark">
-        <template #header>Sam's Weather App</template>
+      <div class="jumbo">
+        <b-jumbotron
+          style="width: 50%"
+          bg-variant="info"
+          text-variant="white"
+          border-variant="dark"
+        >
+          <template #header>Sam's Weather App</template>
 
-        <template #lead>
-          This is a simple web app, where users can enter a location and receive the current weather or 3day forecast for it. 
-        </template>
+          <template #lead>
+            This is a simple web app, where users can enter a location and
+            receive the current weather or 3day forecast for it.
+          </template>
 
-        <hr class="my-4" />
+          <hr class="my-4" />
 
-        <p>
-          All data is gathered from weatherapi.com
-        </p>
-      </b-jumbotron>
-    </div>
+          <p>All data is gathered from weatherapi.com</p>
+        </b-jumbotron>
+      </div>
     </footer>
   </div>
 </template>
@@ -57,30 +61,14 @@ export default {
 </script>
 
 <style scoped>
-#realapp{
-  background-image: url('assets\725626.jpg');
-  height: 100%;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-}
-
-.navbar{
+.navbar {
   width: 60%;
-  
 }
 
-nav{
+nav {
   width: 60%;
   display: flex;
   justify-content: center;
-}
-
-a{
-  color: white !important;
-  font-size: 1.7em;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: black;
 }
 
 #app {
@@ -96,8 +84,8 @@ a{
 h1 {
   text-align: center;
 }
-.jumbo{
-  display:flex;
+.jumbo {
+  display: flex;
   justify-content: center;
 }
 </style>
